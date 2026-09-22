@@ -81,6 +81,92 @@
 .submenu li a:hover {
     background: #f1f1f1;
 }
+.portfolio {
+    overflow: visible !important;
+}
+
+.portfolio .container {
+    overflow: visible !important;
+}
+
+.portfolio .isotope-layout {
+    position: relative;
+    z-index: 10;
+    overflow: visible !important;
+}
+
+.portfolio-filters {
+    position: relative;
+    z-index: 9999 !important;
+    overflow: visible !important;
+}
+
+.portfolio-filters .menu-parent {
+    position: relative;
+    z-index: 10000;
+}
+
+.portfolio-filters .menu-parent > button {
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+.portfolio-filters .menu-parent .submenu {
+    display: none;
+
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+
+    min-width: 230px;
+    padding: 8px 0;
+    margin: 0;
+
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    list-style: none;
+
+    z-index: 99999 !important;
+}
+
+.portfolio-filters .menu-parent:hover .submenu {
+    display: block;
+}
+
+.portfolio-filters .menu-parent .submenu li {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.portfolio-filters .menu-parent .submenu li a {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 16px;
+
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.portfolio-filters .menu-parent .submenu li a:hover {
+    background: #f5f5f5;
+    color: #007bff;
+}
+
+.isotope-container {
+    position: relative;
+    z-index: 1;
+}
 </style>
 
 <body class="index-page">
