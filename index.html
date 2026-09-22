@@ -135,6 +135,17 @@
 
     z-index: 99999 !important;
 }
+  /* Area penghubung antara tombol dan submenu */
+.portfolio-filters .menu-parent .submenu::before {
+    content: "";
+    position: absolute;
+
+    top: -8px;
+    left: 0;
+
+    width: 100%;
+    height: 8px;
+}
 
 .portfolio-filters .menu-parent:hover .submenu {
     display: block;
