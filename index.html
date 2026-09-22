@@ -35,6 +35,33 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
+<style>
+  .modul-toggle {
+    width: 100%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+}
+
+.menu-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modul-arrow {
+    margin-left: auto;
+}
+
+.modul-content {
+    display: none;
+}
+
+.submenu {
+    padding-left: 35px;
+}
+</style>
 
 <body class="index-page">
 
@@ -287,7 +314,77 @@
             <li data-filter=".filter-product">Ijazah Dan Transkrip Nilai</li>
             <li data-filter=".filter-app">Surat Pengalaman Kerja</li>    
             <li data-filter=".filter-branding">Sertifikat</li>
-            <li><a href="#aplikasi-saya">Aplikasi Buatan Saya</a></li>
+            <!-- APLIKASI BUATAN SAYA -->
+
+<button type="button"
+        class="modul-toggle menu-item"
+        onclick="toggleAplikasi()">
+
+    <span class="menu-left">
+
+        <span class="menu-icon">
+            🧩
+        </span>
+
+        <span class="menu-text">
+            Aplikasi Buatan Saya
+        </span>
+
+    </span>
+
+    <span id="aplikasiIcon"
+          class="modul-arrow">
+
+        ▼
+
+    </span>
+
+</button>
+
+
+<!-- SUBMENU APLIKASI -->
+
+<div id="aplikasiContent"
+     class="modul-content">
+
+
+    <!-- TRYOUT CPNS -->
+
+    <a href="https://tryout.site.je/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="menu-item submenu">
+
+        <span class="menu-icon">
+            📝
+        </span>
+
+        <span class="menu-text">
+            Aplikasi Tryout CPNS
+        </span>
+
+    </a>
+
+
+    <!-- APLIKASI KASIR -->
+
+    <a href="https://aplikasi-kasir.site.je/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="menu-item submenu">
+
+        <span class="menu-icon">
+            🛒
+        </span>
+
+        <span class="menu-text">
+            Aplikasi Kasir
+        </span>
+
+    </a>
+
+
+</div>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
@@ -423,24 +520,7 @@
               </div>
             </div>          
           </div><!-- End Portfolio Container -->
-<!-- APLIKASI BUATAN SAYA -->
-<div id="aplikasi-saya" class="aplikasi-saya">
 
-  <h2>Aplikasi Buatan Saya</h2>
-
-  <div class="aplikasi-menu">
-
-    <a href="https://tryout.site.je/" target="_blank">
-      Aplikasi Tryout CPNS
-    </a>
-
-    <a href="https://aplikasi-kasir.site.je/" target="_blank">
-      Aplikasi Kasir
-    </a>
-
-  </div>
-
-</div>
         </div>
 
       </div>
@@ -571,6 +651,26 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+function toggleAplikasi() {
+
+    const content = document.getElementById('aplikasiContent');
+    const icon = document.getElementById('aplikasiIcon');
+
+    if (content.style.display === 'block') {
+
+        content.style.display = 'none';
+        icon.innerHTML = '▼';
+
+    } else {
+
+        content.style.display = 'block';
+        icon.innerHTML = '▲';
+
+    }
+
+}
+</script>
 
 </body>
 
