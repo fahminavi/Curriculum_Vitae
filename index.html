@@ -61,17 +61,51 @@
 .submenu {
     padding-left: 35px;
 }
-#aplikasiContent {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100%;
+/* ==============================
+   MENU APLIKASI
+============================== */
+
+.aplikasi-menu {
+    position: relative;
 }
 
-#aplikasiContent .submenu {
-    display: flex !important;
-    width: 100% !important;
-    flex: 0 0 100% !important;
-    box-sizing: border-box;
+.aplikasi-toggle {
+    border: 0;
+    background: transparent;
+    padding: 10px 15px;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#aplikasiIcon {
+    font-size: 10px;
+}
+
+
+/* SUBMENU */
+
+.aplikasi-content {
+    display: none;
+    width: 100%;
+    padding-top: 5px;
+}
+
+.aplikasi-content a {
+    display: block;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.aplikasi-content a:hover {
+    color: #149ddd;
 }
 </style>
 
@@ -328,70 +362,41 @@
             <li data-filter=".filter-branding">Sertifikat</li>
             <!-- APLIKASI BUATAN SAYA -->
 
-<li button type="button"
-        class="modul-toggle menu-item"
-        onclick="toggleAplikasi()">
+<li class="aplikasi-menu">
 
-    <span class="menu-left">
-        <span class="menu-text">
-            Aplikasi
+    <button type="button"
+            class="aplikasi-toggle"
+            onclick="toggleAplikasi()">
+
+        <span>Aplikasi</span>
+
+        <span id="aplikasiIcon">
+            ▼
         </span>
 
-    </span>
+    </button>
 
-    <span id="aplikasiIcon"
-          class="modul-arrow">
+    <div id="aplikasiContent" class="aplikasi-content">
 
-        ▼
+        <a href="https://tryout.site.je/"
+           target="_blank"
+           rel="noopener noreferrer">
 
-    </span>
+            📝 Aplikasi Tryout CPNS
 
-</button>
+        </a>
 
+        <a href="https://aplikasi-kasir.site.je/"
+           target="_blank"
+           rel="noopener noreferrer">
 
-<!-- SUBMENU APLIKASI -->
+            🛒 Aplikasi Kasir
 
-<div id="aplikasiContent"
-     class="modul-content">
+        </a>
 
+    </div>
 
-    <!-- TRYOUT CPNS -->
-
-    <a href="https://tryout.site.je/"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="menu-item submenu">
-
-        <span class="menu-icon">
-            📝
-        </span>
-
-        <span class="menu-text">
-            Aplikasi Tryout CPNS
-        </span>
-
-    </a>
-
-
-    <!-- APLIKASI KASIR -->
-
-    <a href="https://aplikasi-kasir.site.je/"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="menu-item submenu">
-
-        <span class="menu-icon">
-            🛒
-        </span>
-
-        <span class="menu-text">
-            Aplikasi Kasir
-        </span>
-
-    </a>
-
-
-</div></li>
+</li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
