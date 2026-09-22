@@ -37,8 +37,8 @@
 </head>
 <style>
 .menu-parent {
-    list-style: none;
     position: relative;
+    list-style: none;
 }
 
 .menu-parent > button {
@@ -46,26 +46,40 @@
     background: none;
     cursor: pointer;
     padding: 10px 15px;
-    width: 100%;
-    text-align: left;
 }
 
+/* Awalnya disembunyikan */
 .submenu {
     display: none;
-    list-style: none;
-    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
     margin: 0;
+    padding: 5px 0;
+    min-width: 220px;
+
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+
+    list-style: none;
 }
 
-.submenu.show {
+/* Ketika kursor berada di LI */
+.menu-parent:hover .submenu {
     display: block;
 }
 
 .submenu li a {
     display: block;
-    padding: 10px 30px;
-    text-decoration: none;
+    padding: 10px 15px;
     color: #333;
+    text-decoration: none;
+}
+
+.submenu li a:hover {
+    background: #f1f1f1;
 }
 </style>
 
@@ -321,16 +335,16 @@
             <li data-filter=".filter-app">Surat Pengalaman Kerja</li>    
             <li data-filter=".filter-branding">Sertifikat</li>
             <li class="menu-parent">
-                <button type="button" onclick="toggleMenu(this)">
-                    Aplikasi ▾
-                </button>
-            
-                <ul class="submenu">
-                    <li><a href="https://tryout.site.je/">Tryout CPNS</a></li>
-                    <li><a href="https://aplikasi-kasir.site.je/">Aplikasi Kasir</a></li>
-                </ul>
-            
-            </li>
+            <button type="button">
+                  Aplikasi ▾
+            </button>
+          
+              <ul class="submenu">
+                  <li><a href="#">Tryout CPNS</a></li>
+                  <li><a href="#">Sertifikat</a></li>
+                  <li><a href="#">Surat Pengalaman Kerja</a></li>
+              </ul>
+          </li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
@@ -597,15 +611,6 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
-function toggleMenu(button) {
-
-    const submenu = button.nextElementSibling;
-
-    submenu.classList.toggle('show');
-
-}
-</script>
 
 </body>
 
